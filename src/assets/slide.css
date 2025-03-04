@@ -1,0 +1,108 @@
+.container {
+    max-width: 100%;
+    margin: 40px auto;
+    /* padding: 40px; */
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#hero-section {
+    margin: 0 20px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 400px;
+}
+
+.slides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    display: none;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.slide img {
+    width: 600px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.control-btn {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.control-btn:hover {
+    color: #ff6b6b;
+}
+
+.dots {
+    margin-top: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-color: #bbb;
+    margin: 0 5px;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.dot:hover {
+    background-color: #ff6b6b;
+    opacity: 0.8;
+}
+
+.active-dot {
+    opacity: 1;
+    background-color: #ff6b6b;
+    transform: scale(1.4);
+}
